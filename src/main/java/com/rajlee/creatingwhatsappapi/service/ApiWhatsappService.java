@@ -27,7 +27,7 @@ public class ApiWhatsappService {
     public ApiWhatsappService(){
         restClient = RestClient.builder()
                 .baseUrl("https://graph.facebook.com/v19.0/302797252927415/messages")
-                .defaultHeader("Authorization","Bearer EAAQI7isKUIcBOZCHPr7JrxUrOjEZAptcSKW0qTRKX5ZCr1eqB0xkLAjCNq5Q3DfjPX88LgD62PZBKrp0RFGJrbqx69AeN6aAStg6j58gmh5y44c90ZCzB7HmUI72T1NxOZBMJ4TECSTgbEzTfMjPj5u4alZCOObCgLNSZA6LvvNvLUt1Jlxge0tlveAVGm2rcqckuBxCIfp6yZB3EaZBYtx0iIjXvosIctaOsDLoZAZBKaMk9FEZD")
+                .defaultHeader("Authorization","Bearer EAAQI7isKUIcBO54VLAZCJq95wYOVisDKgXkjPsvw0BRqo5ZAqNGmEiyF34b47ZArqdNapCyEHpWcbMI8zhzoTbuZAf4npHL2tF2NNfBMR9cmq30hliF2ecZBgKkk8ubOQrW2Eq872VP339gXIBu7XdgqE2ZAjDWq7j9H1bAzZBvHlVMiS8QE55srGujUVKBpYHJBbjbMkV4RNommavvxb4ayYvpenKZCa6qKNZCyRfsP0GfgZD")
                 .build();
     }
 

@@ -35,7 +35,12 @@ public class OrganizationController {
     }
 
     @DeleteMapping("/deleteOrg/{id}")
-    public String deleteOrganization(@PathVariable int id) {
+    public String deleteOrganizationById(@PathVariable int id) {
         return organizationService.deleteOrganization(id);
+    }
+
+    @PutMapping("/updateOrg")
+    public Organization updateOrganizatio(@RequestBody Organization org) {
+        return organizationService.updateOrganization(org);
     }
 }

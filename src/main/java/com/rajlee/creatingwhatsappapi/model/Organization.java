@@ -1,17 +1,18 @@
 package com.rajlee.creatingwhatsappapi.model;
 
-import jakarta.persistence.*;
+
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
+@Document
 @Data
-@Entity
-@Table
+
 public class Organization {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int orgId;
     private String orgName;
     private String place;

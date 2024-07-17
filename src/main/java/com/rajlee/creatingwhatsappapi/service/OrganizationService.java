@@ -35,4 +35,11 @@ public class OrganizationService {
         organizationRepository.deleteById(id);
         return "organization removed"+id;
     }
+
+    public Organization updateOrganization(Organization organization) {
+        Organization existingOrganization = organizationRepository.findById(organization.getOrgId()).orElse(null);
+        existingOrganization.setOrgName(organization.getOrgName());
+        existingOrganization.setPlace(organization.getPlace());
+        return organizationRepository.save(existingOrganization);
+    }
 }

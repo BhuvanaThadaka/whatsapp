@@ -1,5 +1,6 @@
 package com.rajlee.creatingwhatsappapi.service;
 
+import com.rajlee.creatingwhatsappapi.model.Organization;
 import com.rajlee.creatingwhatsappapi.model.User;
 import com.rajlee.creatingwhatsappapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,12 @@ public class UserService {
     public String deleteUser(int id){
         userRepository.deleteById(id);
         return "User removed"+id;
+    }
+
+    public User updateUser(User user) {
+        User existingUser = userRepository.findById(user.getUserId()).orElse(null);
+        existingUser.setUserName(user.getUserName());
+        existingUser.setContact(user.getContact());
+        return userRepository.save(existingUser);
     }
 }
